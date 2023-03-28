@@ -1,7 +1,7 @@
-require_relative '../../sections/header/header'
+require_relative '../../sections/home/home_sections'
 module Pages
     class HomePage < SitePrism::Page
-        set_url '/'
-        # section :header, Sections::Header, '.primary_header' 
-    end
+        set_url '/'  
+        section :home_sections, Sections::Home, '#page-home'                
+    end    
 end
