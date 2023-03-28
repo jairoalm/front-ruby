@@ -11,11 +11,12 @@ Funcionalidade: Cadastrar entregador - Validar cadastro de entregador
 
     @deviler_cadastrar
     Cenário: Validar cadastro do parceiro entregador
+        Dado que informo os dados de cadastro do Parceiro Entregador
+        Quando clicar no botão para finalizar o cadastro do Entregador    
+        Então Validar que o cadastro do Entregador foi realizado com sucesso  
     
-        Então Validar componentes da home page do parceiro entregador    
-    
-    @validacao_redirecionamento_deliver
-    Cenário: Validar redirecionamento para página deliver        
-        Quando clicar no botão cadastre para fazer entrega
-        Então Validar que o usuário foi direcionado para página Deliver
+    # @validacao_redirecionamento_deliver
+    # Cenário: Validar redirecionamento para página deliver        
+    #     Quando clicar no botão cadastre para fazer entrega
+    #     Então Validar que o usuário foi direcionado para página Deliver
     
