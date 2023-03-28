@@ -4,8 +4,8 @@ module Factory
         def self.new_user
             {
                 name: Faker::Name.name, 
-                email: Faker::Internet.email,
-                password: '4645645456456'
+                # email: Faker::Internet.email,
+                # password: '4645645456456'
             }
         end
     end    

@@ -4,6 +4,8 @@ require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'rspec'
 require 'site_prism'
+require 'pry'
+require 'faker'
 
 # Capybara.defaut_driver = :selenium_chrome ou Capybara.current_driver = :selenium_chrome
 # Congiração ambiente prod e hml
