@@ -11,4 +11,10 @@ Funcionalidade: Home - Validar página home do Buger Eats
 
     @home_validacao
     Cenário: Validar componentes da home page do parceiro entregador
-        Então Validar componentes da home page do parceiro entregador
+        Então Validar componentes da home page do parceiro entregador    
+    
+    @validacao_redirecionamento_deliver
+    Cenário: Validar redirecionamento para página deliver        
+        Quando clicar no botão cadastre para fazer entrega
+        Então Validar que o usuário foi direcionado para página Deliver
+    

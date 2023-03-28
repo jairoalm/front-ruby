@@ -1,0 +1,1 @@
+url: 'https://buger-eats.vercel.app'
