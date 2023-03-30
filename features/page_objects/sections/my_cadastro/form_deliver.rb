@@ -1,4 +1,5 @@
 # require_relative '../../../support/factory/dynamic/dynamic'
+require 'faker'
 module Sections
     class FormDeliver < SitePrism::Section
         element :deliver_form, 'header a'
@@ -30,14 +31,16 @@ module Sections
             upload_file.attach_file('upload/cnh.jpg', make_visible: true)        
             # btn_cadastrar.click            
         end       
-        def form_deliver_dynamic()           
-            input_name.set "Teste"
-            input_cpf.set "24568796321"
-            input_email.set "teste@teste.com"
-            input_whatsapp.set "89653254525"
-            input_postalcode.set "58706362"
-            btn_busca_cep.click
-            input_number.set "152"
+        def form_deliver_dynamic           
+            input_name.set Faker::Name.name
+            input_cpf.set Faker::CPF.number
+            input_email.set Faker::Internet.email(domain: 'bugereats')
+            input_whatsapp.set Faker::Base.numerify('839########')
+            input_postalcode.set Faker::Address.postcode           
+            btn_busca_cep.click            
+            # sleep 20
+            input_number.set Faker::Number.number            
+            input_complemento.set Faker::Address.secondary_address
             btn_metedo_entrega.click
             upload_file.attach_file('upload/cnh.jpg', make_visible: true)                      
         end 
