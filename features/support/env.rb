@@ -6,6 +6,7 @@ require 'rspec'
 require 'site_prism'
 require 'pry'
 require 'faker'
+require "cpf_faker"
 
 # Capybara.defaut_driver = :selenium_chrome ou Capybara.current_driver = :selenium_chrome
 # Congiração ambiente prod e hml
