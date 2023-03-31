@@ -8,3 +8,4 @@ gem 'site_prism'
 gem 'pry'
 gem 'faker'
 gem 'cpf_faker', '~> 1.3'
+gem "roo", "~> 2.7.0"
