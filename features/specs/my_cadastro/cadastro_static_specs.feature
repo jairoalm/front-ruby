@@ -1,5 +1,5 @@
 #language: pt
-@deliver_regression
+@regression
 Funcionalidade: Cadastrar entregador - Validar cadastro de entregador com dados estáticos
     Como um usuário do Parceiro Entregador
     Quero cadastrar um Parceiro Entregador
