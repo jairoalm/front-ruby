@@ -1,5 +1,5 @@
 #language: pt
-@deliver_regression_cadastro_invalido
+@regression
 Funcionalidade: Cadastrar entregador - Validar cadastros inválidos do parceiro entregador
     Como um usuário do Parceiro Entregador
     Quero tentar cadastrar um Parceiro Entregador com dados inválidos

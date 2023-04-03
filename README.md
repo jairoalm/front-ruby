@@ -1,7 +1,7 @@
-# qarentena-front-web-ruby
+# buger-eats-front-web-ruby
 
 Ambiente:
-- Ruby (versão utilizada para criação do projeto - 2.5.6p201) com DevKit
+- Ruby (versão utilizada para criação do projeto - 3.2.1) com DevKit
 https://rubyinstaller.org/downloads/
 
 - Bundler (gem install bundler)
@@ -15,6 +15,7 @@ Obs.2: na variável de ambiente PATH, incluir o caminho para a pasta do chromedr
 vscode-icons
 Cucumber (Gherkin) Full Support
 Ruby
+Cucumber
 
 - Roteiro para UTILIZAR o projeto:
 1. Fazer o clone do projeto
@@ -23,23 +24,25 @@ Ruby
 4. Para rodar os cenários, utilizar o comando de run do Cucumber:
   ex.: 
   - rodar todos os cenários: 'cucumber'
-  - rodar uma feature: cucumber features/specs/01-cadastro_fixo.feature
-  - rodar um cenário pela tag: cucumber -t @cadastro_valido_fixo_pf
-  - rodar todos os cenários por tag: cucumber -t @regressivo
+  - rodar uma feature: bundle exec cucumber -p default -p hml features/specs/my_cadastro/cadastro_dynamic_spec.feature
+  - rodar um cenário pela tag: bundle exec cucumber -p default -p hml -t@deliver_regression_dynamic
+  - rodar todos os cenários por tag: bundle exec cucumber -p default -p html -t @regressivo
 
 - Roteiro para RECRIAR o projeto:
 1. Abrir uma pasta vazia no VSCode
 2. Criar o arquivo Gemfile (sem extensão) e incluir:
 
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
+gem 'cucumber'
 gem 'capybara'
-gem 'cucumber' (gem 'cucumber', '~> 3.1.0')
-gem 'rspec'
 gem 'selenium-webdriver'
+gem 'rspec'
 gem 'site_prism'
-gem 'cpf_faker'
+gem 'pry'
 gem 'faker'
+gem 'cpf_faker', '~> 1.3'
+gem "roo", "~> 2.7.0"
 
 3. Abrir o terminal (do VSCode, ou o da sua preferência e navegar até a pasta do projeto) e rodar o comando 'bundle install'
 4. Rodar o comando 'cucumber --init'
