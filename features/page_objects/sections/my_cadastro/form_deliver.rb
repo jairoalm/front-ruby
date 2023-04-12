@@ -28,7 +28,7 @@ module Sections
             # Então você pode usar a make_visible opção que tornará temporariamente a entrada do arquivo visível, anexará um arquivo a ele e o ocultará novamente.
             # Se o CSS padrão aplicado por make_visiblesua página não funcionar para tornar a entrada visível, você pode definir hash de valores CSS para usar em vez detrue
             upload_file.attach_file('upload/cnh.jpg', make_visible: true)        
-            btn_cadastrar.click            
+            # btn_cadastrar.click            
         end       
         def form_deliver_dynamic  
             user_data = Factory::Dynamic.new_user
@@ -42,20 +42,7 @@ module Sections
             input_number.set user_data[:number]
             input_complemento.set user_data[:address]
             btn_metedo_entrega.click
-            upload_file.attach_file('upload/cnh.jpg', make_visible: true)
-
-            # input_name.set Faker::Name.name
-            # input_cpf.set Faker::CPF.number
-            # input_email.set Faker::Internet.email(domain: 'bugereats')
-            # input_whatsapp.set Faker::Base.numerify('839########')
-            # input_postalcode.set Faker::Address.postcode           
-            # btn_busca_cep.click            
-            # # sleep 20
-            # input_number.set Faker::Number.number            
-            # input_complemento.set Faker::Address.secondary_address
-            # btn_metedo_entrega.click
-            # upload_file.attach_file('upload/cnh.jpg', make_visible: true) 
-            # btn_cadastrar.click                      
+            upload_file.attach_file('upload/cnh.jpg', make_visible: true)                                 
         end 
         # Preenche o cadastro com dados informados no esquema de cenário em cadastro_invalido_specs.feature
         def preencher_form_com_dados_informados_esquema_de_cenario(nome, cpf, email, cep, numero)
@@ -110,14 +97,3 @@ module Sections
                     
     end
 end
-
-# fill_in 'name', with: row[:nome]                
-# fill_in 'cpf', with: row[:cpf]        
-# fill_in 'email', with: row[:email]
-# fill_in 'whatsapp', with: row[:whatsapp]
-# fill_in 'postalcode', with: row[:postalcode]                
-# find('[type="button"]', :visible => true).click # procura somente o elemento que está visivel.
-# fill_in 'address-number', with: row[:number]
-# fill_in 'address-details', with: row[:address]
-# binding.pry
-# click_button 'Enviar'

@@ -11,6 +11,5 @@ Funcionalidade: Cadastrar entregador - Validar cadastro de entregador com dados 
     @deviler_cadastrar
     Cenário: Validar cadastro do parceiro entregador com dados estáticos
         Dado que informo os dados de cadastro do Parceiro "entregador"
-        # Dado que informo os dados de cadastro do Parceiro Entregador
         Quando confirmar o cadastro do Entregador    
         Então Validar que o cadastro do Entregador foi realizado com sucesso    

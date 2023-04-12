@@ -1,4 +1,6 @@
 #language: pt
+
+@regression
 @home
 Funcionalidade: Home - Validar página home do Buger Eats
     Como um usuário do Parceiro Entregador

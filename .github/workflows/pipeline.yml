@@ -1,0 +1,28 @@
+name: Execução das tags @regressivos
+
+on:
+  push: 
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '0 8,16,22 * * 1,2,3,4,5'
+
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout projeto
+        uses: actions/checkout@v3
+      
+      - name: Setup Ruby environment
+        uses: ruby/setup-ruby@v1.138.0
+        with:
+          ruby-version: '3.2.1'
+
+      - name: Install dependecies
+        run: bundle install
+
+      - name: Run tests
+        run: bundle exec cucumber -p default -p hml

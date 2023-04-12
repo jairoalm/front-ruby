@@ -17,5 +17,6 @@ end
   
 Então('Validar que o usuário foi direcionado para página Deliver') do
     @deliver_page = Pages::DeliverPage.new
-    expect(@deliver_page.cadastro_sections.deliver_form.text).to have_content 'Voltar para home'     
+    # binding.pry
+    expect(@deliver_page.deliver_header.text).to have_content 'Voltar para home'     
 end
