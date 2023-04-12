@@ -25,4 +25,4 @@ jobs:
         run: bundle install
 
       - name: Run tests
-        run: bundle exec cucumber -p default -p hml
+        run: bundle exec cucumber
