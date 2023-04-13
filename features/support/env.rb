@@ -12,7 +12,7 @@ require "roo"
 # Capybara.defaut_driver = :selenium_chrome ou Capybara.current_driver = :selenium_chrome
 # Congiração ambiente prod e hml
 ENVIRONMENT = ENV['ENVIRONMENT']
-ENVIRONMENT_CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT}.yml")
+ENVIRONMENT_CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT}.yaml")
 
 Capybara.app_host = ENVIRONMENT_CONFIG['url']
 
