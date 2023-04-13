@@ -13,8 +13,8 @@ module Sections
         element :btn_metedo_entrega, '[alt="Moto"]'    
         element :upload_file, '.dropzone'         
         element :btn_cadastrar, '[type="submit"]'  
-        element :message_success, '[class*=swal2-popup] .swal2-html-container'        
-
+        element :message_success, '[class*=swal2-popup] .swal2-html-container'           
+        
         def form_deliver_static(entregador)                  
             input_name.set entregador['nome']
             input_cpf.set entregador['cpf']

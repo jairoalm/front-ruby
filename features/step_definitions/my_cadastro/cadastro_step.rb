@@ -30,3 +30,15 @@ Então('Validar que o cadastro do Entregador foi realizado com sucesso') do
     end
 end
 
+Então('Validar componentes da página de cadastrdo de entregador') do    
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "Nome completo")
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "CPF somente números")
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "E-mail")
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "Whatsapp")
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "CEP")
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "Rua", disabled: true)
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "Número")
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "Complemento")
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "Bairro", disabled: true)
+    expect(@deliver_page.form_deliver).to have_field(placeholder: "Cidade/UF", disabled: true)    
+end
